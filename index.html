@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat UI</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    background: #e5ddd5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .chat-container {
+    width: 360px;
+    height: 600px;
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+
+  /* HEADER */
+  .chat-header {
+    background: #075e54;
+    color: white;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .chat-header h3 {
+    font-size: 1rem;
+  }
+
+  .chat-header span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  /* CHAT BODY */
+  .chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #efeae2;
+  }
+
+  .message {
+    max-width: 75%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .received {
+    background: white;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+  }
+
+  .sent {
+    background: #dcf8c6;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+  }
+
+  /* INPUT */
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background: #f0f2f5;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+  }
+
+  .chat-input button {
+    margin-left: 8px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+  <!-- HEADER -->
+  <div class="chat-header">
+    <div class="avatar">A</div>
+    <div>
+      <h3>Alex</h3>
+      <span>online</span>
+    </div>
+  </div>
+
+  <!-- MESSAGES -->
+  <div class="chat-body">
+    <div class="message received">Hey! How are you?</div>
+    <div class="message sent">I'm good 😊 How about you?</div>
+    <div class="message received">Doing great! Are you free today?</div>
+    <div class="message sent">Yes, let's chat!</div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="chat-input">
+    <input type="text" placeholder="Type a message..." />
+    <button>➤</button>
+  </div>
+
+</div>
+
+</body>
+</html>
